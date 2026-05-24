@@ -1,5 +1,6 @@
 package com.mango.productservice.dto.response;
 
+import com.mango.productservice.entities.CategoryEntity;
 import lombok.*;
 
 @Setter
@@ -13,4 +14,6 @@ public class ProductResponse {
     private String Description;
     private Double price;
     private Double discount;
+    private boolean deleted;
+    private CategoryEntity category;
 }

@@ -1,6 +1,7 @@
 package com.mango.productservice.controllers;
 
 import com.mango.productservice.dto.request.ProductRequest;
+import com.mango.productservice.dto.request.ProductUpdate;
 import com.mango.productservice.services.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +26,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<?> saveProduct(@RequestBody @Valid ProductRequest request) {
+    public ResponseEntity<?> saveProduct(@RequestBody @Valid ProductUpdate request) {
         return new ResponseEntity<>(productService.saveProduct(request), HttpStatus.CREATED);
     }
 

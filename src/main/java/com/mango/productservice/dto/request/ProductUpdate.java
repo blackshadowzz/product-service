@@ -8,9 +8,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductRequest {
-    @Null
-    private int id;
+public class ProductUpdate {
 
     @NotBlank(message = "Product name is required")
     private String productName;
@@ -26,4 +24,3 @@ public class ProductRequest {
 
     private boolean deleted ;
 }
-
